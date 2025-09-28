@@ -1,9 +1,11 @@
 const express = require('express')
+const cors = require('cors')
 const path = require('path')
 const {open} = require('sqlite')
 const sqlite3 = require('sqlite3')
 
 const app = express()
+app.use(cors());
 const PORT = process.env.PORT || 3000
 
 const dbPath = path.join(__dirname, 'driverdetails.db')
